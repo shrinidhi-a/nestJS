@@ -1,0 +1,5 @@
+npm i -g @nestjs/cli
+
+install in global
+
+> nest n app_name :: creating nest app.

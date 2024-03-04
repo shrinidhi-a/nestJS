@@ -17,3 +17,16 @@ install in global
     ex: user.module.ts
 
 >> controller :: recieve request, handle. (Specific route).
+
+>> nest cli
+
+> nest g module user --> g: generate.
+CREATE src/user/user.module.ts (85 bytes)
+UPDATE src/app.module.ts (249 bytes)
+
+> nest g controller user
+CREATE src/user/user.controller.ts (101 bytes)
+CREATE src/user/user.controller.spec.ts (496 bytes)
+UPDATE src/user/user.module.ts (170 bytes)
+
+

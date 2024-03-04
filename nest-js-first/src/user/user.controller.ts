@@ -1,8 +1,7 @@
-import { Controller, Get, Param, Post, Req, Delete, Patch } from "@nestjs/common";
+import { Controller, Param, Post, Req, Get, Delete, Patch } from "@nestjs/common";
 
-@Controller("/user")
+@Controller("user")
 export class UserController {
-    // /user/{userId}
     @Post("")
     store(@Req() req: Request) {
         console.log(req.body);

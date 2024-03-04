@@ -6,8 +6,8 @@ export class UserService {
         return { name: "John Doe", age: 30 };
     }
 
-    storeUser(data: any) {
-        return { data: data, message: "data has been stored successfully" };
+    storeUser(body: any) {
+        return { data: body, message: "data has been stored successfully" };
     }
 
     deleteUser(userId: number) {

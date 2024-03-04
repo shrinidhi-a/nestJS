@@ -1,4 +1,4 @@
-import { Controller, Param, Post, Req, Get, Delete, Patch } from "@nestjs/common";
+import { Controller, Param, Post, Req, Get, Delete, Patch, Body } from "@nestjs/common";
 import { UserService } from "./user.service";
 
 @Controller("user")
@@ -9,11 +9,12 @@ export class UserController {
     //     this.userService = new UserService();
     // }
 
-    constructor(private userService: UserService) {}
+    constructor(private userService: UserService) {} // dependency injection
+    // loose coupling: no strong connection b/w the controller and the service
 
     @Post("/:userId")
-    store(@Req() req: Request) {
-        return this.userService.storeUser(req.body);
+    store(@Body() body: any) {
+        return this.userService.storeUser(body);
     }
 
     @Get("/:userId")

@@ -3,3 +3,17 @@ npm i -g @nestjs/cli
 install in global
 
 > nest n app_name :: creating nest app.
+
+>> Module
+> Make nestJS module
+
+    import { Module } from "@nestjs/common";
+    @Module({})
+    export class AppModule {}
+
+> parent module.
+    app.module.ts
+> multiple modules.
+    ex: user.module.ts
+
+>> controller :: recieve request, handle. (Specific route).

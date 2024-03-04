@@ -29,4 +29,9 @@ CREATE src/user/user.controller.ts (101 bytes)
 CREATE src/user/user.controller.spec.ts (496 bytes)
 UPDATE src/user/user.module.ts (170 bytes)
 
+> nest g s user
+CREATE src/user/user.service.ts (92 bytes)
+CREATE src/user/user.service.spec.ts (464 bytes)
+UPDATE src/user/user.module.ts (244 bytes)
+
 

@@ -1,5 +1,7 @@
 import { Controller, Param, Post, Req, Get, Delete, Patch, Body } from "@nestjs/common";
 import { UserService } from "./user.service";
+import { UpdateUserDto } from "./dto/update-user.dto";
+import { CreateUserDto } from "./dto/create-user.dto";
 
 @Controller("user")
 export class UserController {
@@ -13,8 +15,8 @@ export class UserController {
     // loose coupling: no strong connection b/w the controller and the service
 
     @Post("/:userId")
-    store(@Body() body: any) {
-        return this.userService.storeUser(body);
+    store(@Body() CreateUserDto: CreateUserDto) {
+        return this.userService.storeUser(CreateUserDto);
     }
 
     @Get("/:userId")
@@ -28,7 +30,7 @@ export class UserController {
     }
 
     @Patch("/:userId")
-    updateUser(@Param() params: { userId: number }) {
-        return this.userService.updateUser(params.userId);
+    updateUser(@Body() UpdateUserDto: UpdateUserDto, @Param() params: { userId: number }) {
+        return this.userService.updateUser(UpdateUserDto, params.userId);
     }
 }

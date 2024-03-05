@@ -14,6 +14,11 @@ export class UserController {
     constructor(private userService: UserService) {} // dependency injection
     // loose coupling: no strong connection b/w the controller and the service
 
+    @Get("/all")
+    getAllUsers() {
+        return this.userService.getAllUsers();
+    }
+
     @Post("/:userId")
     store(@Body() CreateUserDto: CreateUserDto) {
         return this.userService.storeUser(CreateUserDto);

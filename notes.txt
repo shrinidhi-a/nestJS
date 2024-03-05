@@ -37,3 +37,7 @@ UPDATE src/user/user.module.ts (244 bytes)
 >> Pipe and Validation
 
 > npm i --save class-validator class-transformer
+
+>> Connect mysql
+
+> npm i --save @nestjs/typeorm typeorm mysql2

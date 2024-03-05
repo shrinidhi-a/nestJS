@@ -9,4 +9,7 @@ export class CreateUserDto {
 
     @IsNumber()
     age: number;
+
+    @IsString()
+    password: string;
 }

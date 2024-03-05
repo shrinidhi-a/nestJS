@@ -24,6 +24,10 @@ export class UserService {
         return this.usersReporitory.findOne({ where: { id } });
     }
 
+    findUserByEmail(email: string) {
+        return this.usersReporitory.findOne({ where: { email } });
+    }
+
     storeUser(CreateUserDto: CreateUserDto) {
         return this.usersReporitory.save(CreateUserDto);
     }

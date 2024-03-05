@@ -9,4 +9,7 @@ export class UpdateUserDto {
 
     @IsNumber()
     age: number;
+
+    @IsString()
+    password: string;
 }

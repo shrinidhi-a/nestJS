@@ -16,19 +16,23 @@ export class UserService {
         return this.usersReporitory.find();
     }
 
-    getUser(userId: number) {
-        return `User with id ${userId} has been fetched`;
+    // getUser(userId: number) {
+    //     return this.usersReporitory.findOne({ where: { id: userId } });
+    // }
+
+    getUser(id: number) {
+        return this.usersReporitory.findOne({ where: { id } });
     }
 
     storeUser(CreateUserDto: CreateUserDto) {
-        return { data: CreateUserDto, message: "data has been stored successfully" };
+        return this.usersReporitory.save(CreateUserDto);
     }
 
     deleteUser(userId: number) {
-        return `User with id ${userId} has been deleted`;
+        return this.usersReporitory.delete(userId);
     }
 
     updateUser(UpdateUserDto: UpdateUserDto, userId: number) {
-        return { data: UpdateUserDto, message: `User with id ${userId} has been updated` };
+        return this.usersReporitory.update(userId, UpdateUserDto);
     }
 }

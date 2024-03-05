@@ -44,6 +44,10 @@ UPDATE src/user/user.module.ts (244 bytes)
 
 >> passport auth
 
->npm install --save @nestjs/passport passport passport-local
->npm i --save-dev @types/passport-local
+> npm install --save @nestjs/passport passport passport-local
+> npm i --save-dev @types/passport-local
 
+>> jwt
+
+> npm i --save @nestjs/jwt passport-jwt
+> npm i --save-dev @types/passport-jwt

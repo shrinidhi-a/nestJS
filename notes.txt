@@ -34,4 +34,6 @@ CREATE src/user/user.service.ts (92 bytes)
 CREATE src/user/user.service.spec.ts (464 bytes)
 UPDATE src/user/user.module.ts (244 bytes)
 
+>> Pipe and Validation
 
+> npm i --save class-validator class-transformer

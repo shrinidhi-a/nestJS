@@ -4,8 +4,8 @@ import { CreateUserDto } from "./dto/create-user.dto";
 
 @Injectable()
 export class UserService {
-    getUser() {
-        return { name: "John Doe", age: 30 };
+    getUser(userId: number) {
+        return { userId };
     }
 
     storeUser(CreateUserDto: CreateUserDto) {
